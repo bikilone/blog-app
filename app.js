@@ -12,7 +12,8 @@ app.use(bodyPaser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
 
-mongoose.connect("mongodb://localhost/blog");
+// mongoose.connect("mongodb://localhost/blog");
+mongoose.connect("mongodb://biki:elpaso1906@ds119080.mlab.com:19080/blog-app");
 
 /// mongose model config
 var blogSchema = new mongoose.Schema({
