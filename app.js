@@ -116,6 +116,6 @@ app.delete("/blogs/:id", function(req, res) {
 
 
 
-app.listen("3001", process.env.IP, function () {
+app.listen(process.env.PORT, process.env.IP, function () {
     console.log("server is up on 3001")
 })
