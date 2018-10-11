@@ -92,6 +92,16 @@ app.put("/blogs/:id", function (req, res) {
             res.redirect("/blogs/" + req.params.id)
         }
     })
+});
+
+app.delete("/blogs/:id", function(req, res) {
+    Blog.findByIdAndDelete(req.params.id, function(err) {
+        if(err) {
+            res.redirect("/blogs");
+        } else {
+            res.redirect("/blogs");
+        }
+    })
 })
 
 
